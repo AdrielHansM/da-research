@@ -1,6 +1,9 @@
 def print_string(string):
     print(string)
 
+def computeMeanArterialPressure(systolic, diastolic):
+    return ((2* diastolic) + systolic) / 3
+
 def get_age_range(age):
     if age < 36 :   return 0 #UnderWeight
     elif age > 35 and age  < 41:   return 1 #NormalWeight
@@ -20,11 +23,11 @@ def get_bmi_class(bmi):
 
 def get_map_class(diastolic):
     if diastolic < 79.9: return 0 #Normal
-    elif diastolic > 79.9 and diastolic < 89.9:  return 1 #Normal
-    elif diastolic > 89.9 and diastolic < 99.9:  return 2 #Normal
-    elif diastolic > 99.9 and diastolic < 109.9:  return 3 #High
+    elif diastolic > 79.9 and diastolic < 89.9:  return 1 #Elevated
+    elif diastolic > 89.9 and diastolic < 99.9:  return 2 #High Blood Pressure
+    elif diastolic > 99.9 and diastolic < 109.9:  return 3 #High 
     elif diastolic > 109.9 and diastolic < 119.9:  return 4 #Normal
-    elif diastolic > 119.9:  return 5 #High
+    elif diastolic > 119.9:  return 5 #Elevated
 
 def get_cholesterol_class(cholesterol):
     if cholesterol < 201: return 0 #Normal

@@ -1,11 +1,12 @@
 class Patient:
-  def __init__(self, cluster, age, gender, glucose, diastolic_bp, systolic_bp, skin_thickness, insulin, bmi, dpf, age_bin, bmi_class, map_class, cholesterol_class, glucose_class, smoke, active):
+  def __init__(self, cluster, age, gender, glucose, systolic_bp, diastolic_bp, mean_arterial_pressure,skin_thickness, insulin, bmi, dpf, age_bin, bmi_class, map_class, cholesterol_class, glucose_class, smoke, active):
     self.__cluster = cluster
     self.__age = age
     self.__gender = gender
     self.__glucose = glucose
-    self.__diastolic_bp = diastolic_bp
     self.__systolic_bp = systolic_bp
+    self.__diastolic_bp = diastolic_bp
+    self.__mean_arterial_pressure = mean_arterial_pressure
     self.__skin_thickness = skin_thickness
     self.__insulin = insulin
     self.__bmi = bmi
@@ -54,6 +55,14 @@ class Patient:
     self._glucose = glucose
 
   @property
+  def systolic_bp(self):
+    return self.__systolic_bp
+  
+  @systolic_bp.setter
+  def systolic_bp(self, systolic_bp):
+    self._systolic_bp = systolic_bp
+
+  @property
   def diastolic_bp(self):
     return self.__diastolic_bp
   
@@ -62,12 +71,12 @@ class Patient:
     self._diastolic_bp = diastolic_bp
 
   @property
-  def systolic_bp(self):
-    return self.__systolic_bp
-  
-  @systolic_bp.setter
-  def systolic_bp(self, systolic_bp):
-    self._systolic_bp = systolic_bp
+  def mean_arterial_pressure(self):
+    return self.__mean_arterial_pressure
+
+  @mean_arterial_pressure.setter
+  def mean_arterial_pressure(self, mean_arterial_pressure):
+    self._mean_arterial_pressure = mean_arterial_pressure
 
   @property
   def skin_thickness(self):
