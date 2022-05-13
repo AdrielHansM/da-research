@@ -1,10 +1,10 @@
 def print_string(string):
     print(string)
 
-def computeMeanArterialPressure(systolic, diastolic):
+def compute_mean_arterial_pressure(systolic, diastolic):
     return ((2* diastolic) + systolic) / 3
 
-def get_age_range(age):
+def get_age_class(age):
     if age < 36 :   return 0 #UnderWeight
     elif age > 35 and age  < 41:   return 1 #NormalWeight
     elif age > 40 and age < 46:  return 2 #OverWeight
@@ -21,13 +21,13 @@ def get_bmi_class(bmi):
     elif bmi > 34.9 and bmi < 39.9:  return 4 #ClassObesity_2
     elif bmi > 39.9:  return 5 #ClassObesity_3
 
-def get_map_class(diastolic):
-    if diastolic < 79.9: return 0 #Normal
-    elif diastolic > 79.9 and diastolic < 89.9:  return 1 #Elevated
-    elif diastolic > 89.9 and diastolic < 99.9:  return 2 #High Blood Pressure
-    elif diastolic > 99.9 and diastolic < 109.9:  return 3 #High 
-    elif diastolic > 109.9 and diastolic < 119.9:  return 4 #Normal
-    elif diastolic > 119.9:  return 5 #Elevated
+def get_map_class(mean_arterial_pressure):
+    if mean_arterial_pressure < 70: return 0 #Low
+    elif mean_arterial_pressure > 69 and mean_arterial_pressure < 101:  return 1 #Normal
+    elif mean_arterial_pressure > 100 and mean_arterial_pressure < 111:  return 2 #Elevated
+    elif mean_arterial_pressure > 110 and mean_arterial_pressure < 121:  return 3 #Risk of Hypertension 1
+    elif mean_arterial_pressure > 120 and mean_arterial_pressure < 131:  return 4 #Risk of Hypertension 2
+    elif mean_arterial_pressure > 130:  return 5 #Emergency Care Needed
 
 def get_cholesterol_class(cholesterol):
     if cholesterol < 201: return 0 #Normal
@@ -37,4 +37,4 @@ def get_cholesterol_class(cholesterol):
 def get_glucose_class(glucose):
     if glucose < 101: return 0 #Normal
     elif glucose > 100 and glucose < 126:  return 1 #High
-    elif glucose > 125: return 2 #High Requires medical attention
+    elif glucose > 125: return 2 #High
