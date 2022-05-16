@@ -1,5 +1,5 @@
 def compute_mean_arterial_pressure(systolic, diastolic):
-    return ((2* diastolic) + systolic) / 3
+    return ((2 * diastolic) + systolic) / 3
 
 def compute_bmi(weight, height):
     return weight / (height/100)**2
