@@ -57,10 +57,10 @@ def get_health_status(bmi_class, map_class, cholesterol_class, glucose_class, cv
     else "Risk of hypertension 2" if map_class == '4' 
     else "Requires Emergency Care")
 
+    health_status['glucose_status'] = "Normal" if glucose_class == '0' else "Borderline High" if glucose_class == '1' else "High"
+
     health_status['cholesterol_status'] = ("Normal" if cholesterol_class == '0' else "Borderline High" if cholesterol_class == '1' 
     else "High")
-
-    health_status['glucose_status'] = "Normal" if glucose_class == '0' else "Borderline High" if glucose_class == '1' else "High"
 
     health_status['cvd_risk'] = "Low Risk" if cvd_prediction == '0' else "High Risk"
 
