@@ -5,13 +5,13 @@ def compute_bmi(weight, height):
     return weight / (height/100)**2
 
 def get_age_class(age):
-    if age < 36 :   return 0 #UnderWeight
-    elif age > 35 and age  < 41:   return 1 #NormalWeight
-    elif age > 40 and age < 46:  return 2 #OverWeight
-    elif age > 45 and age < 51:  return 3 #ClassObesity_1
-    elif age > 50 and age < 56:  return 4 #ClassObesity_2
-    elif age > 55 and age < 61:  return 5 #ClassObesity_3
-    elif age > 61:  return 6 #ClassObesity_4
+    if age < 36 :   return 0 
+    elif age > 35 and age  < 41:   return 1 
+    elif age > 40 and age < 46:  return 2 
+    elif age > 45 and age < 51:  return 3 
+    elif age > 50 and age < 56:  return 4 
+    elif age > 55 and age < 61:  return 5 
+    elif age > 61:  return 6 
 
 def get_bmi_class(bmi):
     if bmi < 18.5 :   return 0 #UnderWeight
@@ -45,11 +45,10 @@ def get_health_status(bmi_class, map_class, cholesterol_class, glucose_class, cv
     health_status['bmi_status'] = ("Underweight" if bmi_class == '0' 
     else "Normal" if bmi_class == '1'
     else "Overweight" if bmi_class == '2'
-    else "Obese" if bmi_class == '3'
-    else "Obesity Class 1" if bmi_class == '4'
-    else "Obesity Class 2" if bmi_class == '5' 
+    else "Obesity Class 1" if bmi_class == '3'
+    else "Obesity Class 2" if bmi_class == '4'
     else "Obesity Class 3")
-
+    
     health_status['map_status'] = ("Low" if map_class == '0' 
     else "Normal" if map_class == '1' 
     else "Elevated" if map_class == '2' 
